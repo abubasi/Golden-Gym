@@ -19,7 +19,7 @@ const setBilling = (mode) => {
   });
 
   billingLabels.forEach((label) => {
-    label.textContent = mode === "monthly" ? "/ month" : "/ year";
+    label.textContent = mode === "monthly" ? "/ one month" : mode === "quarterly" ? "/ Three months" : "/ one year";
   });
 };
 
