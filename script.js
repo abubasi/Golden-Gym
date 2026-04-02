@@ -15,7 +15,7 @@ const setBilling = (mode) => {
 
   prices.forEach((price) => {
     const amount = price.dataset[mode];
-    price.textContent = `$${amount}`;
+    price.textContent = `₹${amount}`;
   });
 
   billingLabels.forEach((label) => {
