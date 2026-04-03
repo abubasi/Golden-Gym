@@ -3,6 +3,8 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
 const billingButtons = document.querySelectorAll(".toggle-btn");
+const pricingGrid = document.querySelector(".pricing-grid");
+const priceCards = document.querySelectorAll(".price-card");
 const prices = document.querySelectorAll(".price");
 const billingLabels = document.querySelectorAll(".billing-cycle");
 const revealItems = document.querySelectorAll(".reveal");
@@ -16,6 +18,21 @@ const setBilling = (mode) => {
   prices.forEach((price) => {
     const amount = price.dataset[mode];
     price.textContent = `₹${amount}`;
+  });
+
+  prices.forEach((price) => {
+    price.textContent = price.textContent.replace(/^[^\d]+/, "\u20b9");
+  });
+
+  if (pricingGrid) {
+    pricingGrid.classList.toggle("is-yearly", mode === "yearly");
+  }
+
+  priceCards.forEach((card) => {
+    const visibilityModes = (card.dataset.billingVisibility || "monthly yearly").split(" ");
+    const isVisible = visibilityModes.includes(mode);
+    card.hidden = !isVisible;
+    card.setAttribute("aria-hidden", String(!isVisible));
   });
 
   billingLabels.forEach((label) => {

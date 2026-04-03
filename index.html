@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goldend Gym | Premium Fitness Experience</title>
+    <title>Golden Gym | Premium Fitness Experience</title>
     <meta
       name="description"
       content="Goldend Gym is a premium fitness destination with expert trainers, modern equipment, and flexible membership plans."
@@ -24,7 +24,10 @@
     </div>
 
     <header class="navbar" id="top">
-      <a href="#home" class="logo" aria-label="Goldend Gym home">Goldend Gym Unisex</a>
+      <a href="#home" class="logo" aria-label="Golden Gym home">
+        <img src="Asserts/logo.jpeg" alt="Golden Gym logo" class="logo-image" />
+        <span class="logo-text">Golden Gym Unisex</span>
+      </a>
 
       <button
         class="nav-toggle"
@@ -152,7 +155,7 @@
                   />
                 </svg>
               </div>
-              <h3>Yoga &amp; Fitness Classes</h3>
+              <h3>Fitness Classes</h3>
               <p>
                 Move better, recover faster, and build stamina with curated
                 class programming for every level.
@@ -275,7 +278,7 @@
           </div>
 
           <div class="pricing-grid">
-            <article class="price-card reveal">
+            <article class="price-card reveal" data-billing-visibility="monthly">
               <p class="plan-name">Basic</p>
               <h3 class="price" data-monthly="600" data-yearly="5,000"> ₹600</h3>
               <ul class="plan-features">
@@ -287,7 +290,7 @@
               <a href="#contact" class="btn btn-secondary">Choose Basic</a>
             </article>
 
-            <article class="price-card reveal reveal-delay">
+            <article class="price-card reveal reveal-delay" data-billing-visibility="monthly">
               <p class="plan-name">Pro</p>
               <h3 class="price" data-monthly="1600" data-yearly="5,999">₹1600</h3>
               <ul class="plan-features">
@@ -299,10 +302,22 @@
               <a href="#contact" class="btn btn-secondary">Choose Pro</a>
             </article>
 
-            <article class="price-card featured reveal">
+            <article class="price-card reveal reveal-delay" data-billing-visibility="monthly">
+              <p class="plan-name">Pro Max</p>
+              <h3 class="price" data-monthly="3000" data-yearly="5,999">₹3000</h3>
+              <ul class="plan-features">
+                <h4>Six Month Access</h4>
+                <li>All classes included</li>
+                <li>2 PT sessions / month</li>
+                <li>Custom diet guidance</li>
+              </ul>
+              <a href="#contact" class="btn btn-secondary">Choose Pro Max</a>
+            </article>
+
+            <article class="price-card featured reveal" data-billing-visibility="yearly">
               <div class="plan-badge">VIP Choice</div>
               <p class="plan-name">Elite</p>
-              <h3 class="price" data-monthly="5999" data-yearly="9,999">₹5999</h3>
+              <h3 class="price" data-monthly="5999" data-yearly="5,999">₹5999</h3>
               <ul class="plan-features">
                 <h4>One Year Access</h4>
                 <li>Unlimited PT coaching</li>
